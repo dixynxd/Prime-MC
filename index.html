@@ -1,161 +1,396 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>PrimeMC | Minecraft</title>
+<title>PrimeMC | Minecraft</title>
 
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    min-height:100vh;
+    font-family:Arial,Helvetica,sans-serif;
+    color:white;
+    overflow-x:hidden;
+
+    background:
+        radial-gradient(circle at 50% 15%,rgba(0,140,255,.40),transparent 35%),
+        radial-gradient(circle at 15% 85%,rgba(0,90,255,.25),transparent 35%),
+        linear-gradient(135deg,#010712,#021d46,#010712);
+}
+
+/* BLUE PARTICLES */
+
+body::before{
+    content:"";
+    position:fixed;
+    inset:0;
+    pointer-events:none;
+
+    background-image:
+        radial-gradient(circle,rgba(70,170,255,.35) 1px,transparent 1px);
+
+    background-size:55px 55px;
+    animation:particles 18s linear infinite;
+    opacity:.45;
+}
+
+@keyframes particles{
+    from{background-position:0 0;}
+    to{background-position:550px 550px;}
+}
+
+/* NAVBAR */
+
+nav{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+
+    padding:20px 7%;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    z-index:10;
+
+    background:rgba(0,8,20,.55);
+    backdrop-filter:blur(14px);
+
+    border-bottom:1px solid rgba(30,140,255,.15);
+}
+
+.nav-logo{
+    font-size:22px;
+    font-weight:900;
+    letter-spacing:3px;
+
+    color:#4da6ff;
+
+    text-shadow:0 0 15px rgba(0,140,255,.7);
+}
+
+nav a{
+    color:#c9e5ff;
+    text-decoration:none;
+
+    margin-left:25px;
+
+    font-weight:600;
+
+    transition:.25s;
+}
+
+nav a:hover{
+    color:#39a5ff;
+    text-shadow:0 0 12px rgba(0,140,255,.8);
+}
+
+/* HERO */
+
+.hero{
+    min-height:100vh;
+
+    display:flex;
+    flex-direction:column;
+
+    align-items:center;
+    justify-content:center;
+
+    text-align:center;
+
+    padding:120px 20px 60px;
+
+    position:relative;
+    z-index:1;
+}
+
+/* LOGO */
+
+.logo{
+    width:min(620px,85vw);
+    max-height:320px;
+
+    object-fit:contain;
+
+    filter:
+        drop-shadow(0 0 20px rgba(0,140,255,.75))
+        drop-shadow(0 0 55px rgba(0,100,255,.4));
+
+    animation:logoFloat 4s ease-in-out infinite;
+}
+
+@keyframes logoFloat{
+    0%,100%{transform:translateY(0);}
+    50%{transform:translateY(-12px);}
+}
+
+/* SUBTITLE */
+
+.subtitle{
+    margin-top:20px;
+
+    font-size:clamp(16px,2vw,22px);
+
+    color:#a9d5ff;
+
+    letter-spacing:1px;
+
+    text-shadow:0 0 15px rgba(0,140,255,.3);
+}
+
+/* SERVER IP */
+
+.server-ip{
+    margin-top:30px;
+
+    padding:16px 28px;
+
+    border-radius:12px;
+
+    background:rgba(0,70,160,.20);
+
+    border:1px solid rgba(60,160,255,.45);
+
+    box-shadow:
+        0 0 30px rgba(0,110,255,.18),
+        inset 0 0 20px rgba(0,100,255,.08);
+
+    cursor:pointer;
+
+    transition:.3s;
+}
+
+.server-ip:hover{
+    transform:translateY(-4px);
+
+    border-color:#4da6ff;
+
+    box-shadow:0 0 40px rgba(0,130,255,.45);
+}
+
+.server-ip span{
+    display:block;
+
+    font-size:11px;
+
+    color:#66baff;
+
+    margin-bottom:7px;
+
+    letter-spacing:3px;
+
+    text-transform:uppercase;
+}
+
+.server-ip strong{
+    font-family:monospace;
+
+    font-size:clamp(17px,3vw,25px);
+
+    color:white;
+
+    text-shadow:0 0 12px rgba(80,180,255,.5);
+}
+
+/* BUTTONS */
+
+.buttons{
+    display:flex;
+
+    gap:15px;
+
+    margin-top:35px;
+
+    flex-wrap:wrap;
+
+    justify-content:center;
+}
+
+.button{
+    padding:15px 30px;
+
+    border-radius:10px;
+
+    text-decoration:none;
+
+    font-weight:700;
+
+    color:white;
+
+    background:linear-gradient(135deg,#008cff,#075eff);
+
+    box-shadow:0 0 25px rgba(0,120,255,.4);
+
+    transition:.3s;
+}
+
+.button:hover{
+    transform:translateY(-4px) scale(1.02);
+
+    box-shadow:0 0 45px rgba(0,140,255,.75);
+}
+
+.button.secondary{
+    background:rgba(0,90,180,.15);
+
+    border:1px solid rgba(80,170,255,.35);
+}
+
+.button.secondary:hover{
+    background:rgba(0,120,255,.25);
+}
+
+/* BOTTOM */
+
+.scroll{
+    position:absolute;
+
+    bottom:25px;
+
+    color:#6faee5;
+
+    font-size:12px;
+
+    letter-spacing:3px;
+
+    opacity:.7;
+}
+
+/* MOBILE */
+
+@media(max-width:600px){
+
+    nav{
+        padding:18px 5%;
     }
 
-    html {
-      scroll-behavior: smooth;
+    nav a{
+        margin-left:12px;
+        font-size:13px;
     }
 
-    body {
-      min-height: 100vh;
-      font-family: Arial, Helvetica, sans-serif;
-      color: white;
-      overflow-x: hidden;
-
-      background:
-        radial-gradient(
-          circle at 50% 0%,
-          rgba(0, 119, 255, 0.30),
-          transparent 45%
-        ),
-        linear-gradient(
-          135deg,
-          #020617,
-          #061a40,
-          #020617
-        );
+    .logo{
+        width:90vw;
     }
 
-    .hero {
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      padding: 30px;
+    .server-ip strong{
+        font-size:16px;
     }
-
-    .logo {
-      width: min(600px, 85vw);
-      max-height: 300px;
-      object-fit: contain;
-
-      filter:
-        drop-shadow(0 0 20px rgba(0, 119, 255, 0.45))
-        drop-shadow(0 0 50px rgba(0, 119, 255, 0.20));
-
-      animation: float 4s ease-in-out infinite;
-    }
-
-    @keyframes float {
-      0%, 100% {
-        transform: translateY(0);
-      }
-
-      50% {
-        transform: translateY(-10px);
-      }
-    }
-
-    .hero p {
-      margin-top: 20px;
-      font-size: 20px;
-      color: #b9d9ff;
-    }
-
-    .buttons {
-      display: flex;
-      gap: 15px;
-      margin-top: 35px;
-      flex-wrap: wrap;
-      justify-content: center;
-    }
-
-    .button {
-      padding: 15px 28px;
-      border-radius: 10px;
-      text-decoration: none;
-      color: white;
-      font-weight: bold;
-
-      background: #087cff;
-      box-shadow: 0 0 25px rgba(0, 119, 255, 0.35);
-
-      transition: 0.25s;
-    }
-
-    .button:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 0 40px rgba(0, 119, 255, 0.65);
-    }
-
-    .button.secondary {
-      background: rgba(255, 255, 255, 0.08);
-      border: 1px solid rgba(255, 255, 255, 0.15);
-    }
-
-    .ip {
-      margin-top: 25px;
-      padding: 12px 20px;
-
-      border-radius: 8px;
-      background: rgba(0, 0, 0, 0.25);
-
-      color: #65b9ff;
-      font-family: monospace;
-      font-size: 17px;
-    }
-  </style>
+}
+</style>
 </head>
 
 <body>
 
-  <section class="hero">
+<nav>
+
+    <div class="nav-logo">
+        PRIMEMC
+    </div>
+
+    <div>
+
+        <a href="#home">
+            Home
+        </a>
+
+        <a
+            href="https://discord.gg/eR7yvQqnjr"
+            target="_blank"
+        >
+            Discord
+        </a>
+
+    </div>
+
+</nav>
+
+
+<section class="hero" id="home">
 
     <img
-      src="primemclogo.png"
-      alt="PrimeMC Logo"
-      class="logo"
+        src="primemclogo.png"
+        alt="PrimeMC Logo"
+        class="logo"
     >
 
-    <p>Welcome to the PrimeMC community.</p>
+    <p class="subtitle">
+        Your Minecraft adventure starts here.
+    </p>
+
+
+    <div
+        class="server-ip"
+        onclick="copyIP()"
+        title="Click to copy"
+    >
+
+        <span>
+            Minecraft Server
+        </span>
+
+        <strong>
+            primemc.playwithbao.com
+        </strong>
+
+    </div>
+
 
     <div class="buttons">
 
-      <a
-        class="button"
-        href="https://discord.gg/e"
-        target="_blank"
-      >
-        Join Discord
-      </a>
+        <a
+            class="button"
+            href="https://discord.gg/eR7yvQqnjr"
+            target="_blank"
+        >
+            Join Discord
+        </a>
 
-      <a
-        class="button secondary"
-        href="#about"
-      >
-        Explore
-      </a>
+        <a
+            class="button secondary"
+            href="#home"
+        >
+            Play Now
+        </a>
 
     </div>
 
-    <div class="ip">
-      play.primemc.fun
+
+    <div class="scroll">
+        SCROLL TO EXPLORE
     </div>
 
-  </section>
+</section>
+
+
+<script>
+
+function copyIP(){
+
+    navigator.clipboard.writeText(
+        "primemc.playwithbao.com"
+    );
+
+    alert(
+        "PrimeMC IP copied! 💙"
+    );
+
+}
+
+</script>
 
 </body>
 </html>
