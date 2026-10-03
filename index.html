@@ -286,6 +286,774 @@ section:not(.hero){
 
     border-color:rgba(50,160,255,.5);
 
-    box-shadow:0 15px 50px rgb
-```
+    box-shadow:0 15px 50px rgba(0,110,255,.15);
+}
 
+.card .icon{
+    font-size:34px;
+    margin-bottom:18px;
+}
+
+.card h3{
+    font-size:21px;
+    margin-bottom:10px;
+}
+
+.card p{
+    color:#8eafd0;
+    line-height:1.7;
+}
+
+/* FEATURES */
+
+.features{
+    max-width:1100px;
+    margin:55px auto 0;
+
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:20px;
+}
+
+.feature{
+    padding:28px;
+
+    display:flex;
+    gap:20px;
+    align-items:flex-start;
+
+    border-radius:16px;
+
+    background:rgba(0,80,160,.08);
+    border:1px solid rgba(50,150,255,.12);
+}
+
+.feature-icon{
+    min-width:50px;
+    height:50px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    border-radius:12px;
+
+    background:rgba(0,130,255,.14);
+    border:1px solid rgba(50,160,255,.2);
+
+    font-size:24px;
+}
+
+.feature h3{
+    margin-bottom:7px;
+}
+
+.feature p{
+    color:#89a9c9;
+    line-height:1.6;
+}
+
+/* WHY */
+
+.why{
+    max-width:1100px;
+    margin:55px auto 0;
+
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:25px;
+}
+
+.big-card{
+    padding:40px;
+
+    border-radius:20px;
+
+    background:
+        radial-gradient(circle at top right,rgba(0,140,255,.18),transparent 40%),
+        rgba(0,50,110,.15);
+
+    border:1px solid rgba(60,160,255,.16);
+}
+
+.big-card h3{
+    font-size:28px;
+    margin-bottom:15px;
+}
+
+.big-card p{
+    color:#8eafd0;
+    line-height:1.8;
+}
+
+/* ROADMAP */
+
+.roadmap{
+    max-width:800px;
+    margin:55px auto 0;
+}
+
+.road-item{
+    position:relative;
+
+    padding:25px 25px 25px 65px;
+
+    border-left:2px solid #168dff;
+}
+
+.road-item::before{
+    content:"";
+
+    position:absolute;
+    left:-8px;
+    top:28px;
+
+    width:14px;
+    height:14px;
+
+    border-radius:50%;
+
+    background:#1595ff;
+
+    box-shadow:0 0 20px #008cff;
+}
+
+.road-item h3{
+    color:#fff;
+    margin-bottom:8px;
+}
+
+.road-item p{
+    color:#86a9ca;
+    line-height:1.6;
+}
+
+.status{
+    display:inline-block;
+
+    margin-left:8px;
+    padding:4px 9px;
+
+    border-radius:20px;
+
+    font-size:10px;
+
+    color:#76c4ff;
+    background:rgba(0,130,255,.12);
+
+    border:1px solid rgba(50,160,255,.2);
+}
+
+/* COMMUNITY */
+
+.community{
+    max-width:950px;
+    margin:55px auto 0;
+
+    text-align:center;
+
+    padding:60px 30px;
+
+    border-radius:25px;
+
+    background:
+        radial-gradient(circle at 50% 0%,rgba(0,140,255,.25),transparent 55%),
+        rgba(0,50,110,.16);
+
+    border:1px solid rgba(50,160,255,.18);
+}
+
+.community h3{
+    font-size:34px;
+}
+
+.community p{
+    max-width:650px;
+    margin:15px auto 30px;
+
+    color:#91b3d2;
+    line-height:1.7;
+}
+
+/* FAQ */
+
+.faq{
+    max-width:800px;
+    margin:55px auto 0;
+}
+
+details{
+    margin-bottom:12px;
+
+    padding:20px 23px;
+
+    background:rgba(0,70,140,.10);
+
+    border:1px solid rgba(60,160,255,.14);
+
+    border-radius:12px;
+}
+
+summary{
+    cursor:pointer;
+    font-weight:800;
+}
+
+details p{
+    margin-top:15px;
+    color:#88a9c9;
+    line-height:1.6;
+}
+
+/* FOOTER */
+
+footer{
+    padding:45px 7%;
+
+    text-align:center;
+
+    background:#01050d;
+
+    border-top:1px solid rgba(50,150,255,.12);
+}
+
+footer strong{
+    color:#3ba7ff;
+}
+
+footer p{
+    margin-top:10px;
+    color:#607f9e;
+    font-size:13px;
+}
+
+/* MOBILE */
+
+@media(max-width:800px){
+
+    .nav-links{
+        display:none;
+    }
+
+    .motive-grid{
+        grid-template-columns:1fr;
+    }
+
+    .features{
+        grid-template-columns:1fr;
+    }
+
+    .why{
+        grid-template-columns:1fr;
+    }
+
+    section:not(.hero){
+        padding:80px 5%;
+    }
+
+    .hero p{
+        font-size:16px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+
+<nav>
+
+    <div class="nav-logo">
+        PRIMEMC
+    </div>
+
+    <div class="nav-links">
+        <a href="#motive">Motive</a>
+        <a href="#features">Features</a>
+        <a href="#roadmap">Roadmap</a>
+        <a href="#faq">FAQ</a>
+
+        <a
+            href="https://discord.gg/eR7yvQqnjr"
+            target="_blank"
+        >
+            Discord
+        </a>
+    </div>
+
+</nav>
+
+
+<!-- HERO -->
+
+<section class="hero">
+
+    <div class="hero-content">
+
+        <img
+            src="primemclogo.png"
+            alt="PrimeMC Logo"
+            class="logo"
+        >
+
+        <div class="badge">
+            WELCOME TO PRIMEMC
+        </div>
+
+        <h1>
+            YOUR NEXT
+            <span>MINECRAFT</span>
+            ADVENTURE.
+        </h1>
+
+        <p>
+            PrimeMC is built for players who want a
+            fresh Minecraft experience, an active community,
+            and a world worth coming back to.
+        </p>
+
+        <div class="buttons">
+
+            <a
+                class="btn"
+                href="https://discord.gg/eR7yvQqnjr"
+                target="_blank"
+            >
+                Join Discord
+            </a>
+
+            <a
+                class="btn secondary"
+                href="#motive"
+            >
+                Explore PrimeMC
+            </a>
+
+        </div>
+
+        <div
+            class="ip"
+            onclick="copyIP()"
+            title="Click to copy"
+        >
+            🎮 primemc.playwithbao.com
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- MOTIVE -->
+
+<section id="motive">
+
+    <div class="section-title">
+
+        <div class="small">
+            Our Motive
+        </div>
+
+        <h2>
+            More Than Just A Server.
+        </h2>
+
+        <p>
+            PrimeMC exists to create a Minecraft community
+            where players can build, compete, explore and
+            make memories together.
+        </p>
+
+    </div>
+
+    <div class="motive-grid">
+
+        <div class="card">
+            <div class="icon">🌎</div>
+
+            <h3>
+                A World To Explore
+            </h3>
+
+            <p>
+                Build your base, explore the world and
+                create something that actually feels like
+                yours.
+            </p>
+        </div>
+
+        <div class="card">
+            <div class="icon">⚔️</div>
+
+            <h3>
+                Play Your Way
+            </h3>
+
+            <p>
+                Whether you love survival, competition or
+                simply chilling with friends, PrimeMC is
+                made for different kinds of players.
+            </p>
+        </div>
+
+        <div class="card">
+            <div class="icon">🤝</div>
+
+            <h3>
+                Community First
+            </h3>
+
+            <p>
+                We're building a community where players
+                can meet new people, participate in events
+                and have fun together.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- FEATURES -->
+
+<section id="features">
+
+    <div class="section-title">
+
+        <div class="small">
+            Experience
+        </div>
+
+        <h2>
+            Built For Minecraft Players.
+        </h2>
+
+        <p>
+            Everything we build is focused on making your
+            time on PrimeMC better.
+        </p>
+
+    </div>
+
+    <div class="features">
+
+        <div class="feature">
+
+            <div class="feature-icon">⚡</div>
+
+            <div>
+                <h3>Optimized Gameplay</h3>
+
+                <p>
+                    A smooth and enjoyable Minecraft
+                    experience is always the goal.
+                </p>
+            </div>
+
+        </div>
+
+        <div class="feature">
+
+            <div class="feature-icon">🎉</div>
+
+            <div>
+                <h3>Community Events</h3>
+
+                <p>
+                    Special events and activities to keep
+                    the server fresh and exciting.
+                </p>
+            </div>
+
+        </div>
+
+        <div class="feature">
+
+            <div class="feature-icon">🏆</div>
+
+            <div>
+                <h3>Competition</h3>
+
+                <p>
+                    Challenge yourself, climb the ranks and
+                    prove what you can do.
+                </p>
+            </div>
+
+        </div>
+
+        <div class="feature">
+
+            <div class="feature-icon">🛡️</div>
+
+            <div>
+                <h3>Fair Community</h3>
+
+                <p>
+                    A friendly environment where everyone
+                    can enjoy playing Minecraft.
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- WHY PRIMEMC -->
+
+<section>
+
+    <div class="section-title">
+
+        <div class="small">
+            Why PrimeMC
+        </div>
+
+        <h2>
+            Made With A Purpose.
+        </h2>
+
+    </div>
+
+    <div class="why">
+
+        <div class="big-card">
+
+            <h3>
+                🧱 Build Something.
+            </h3>
+
+            <p>
+                Start with nothing and turn it into
+                something incredible. Build your home,
+                create your town and leave your mark on
+                the PrimeMC world.
+            </p>
+
+        </div>
+
+        <div class="big-card">
+
+            <h3>
+                🔥 Make History.
+            </h3>
+
+            <p>
+                Every player has a story. Every build has
+                a beginning. Join the community and become
+                part of what PrimeMC becomes.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ROADMAP -->
+
+<section id="roadmap">
+
+    <div class="section-title">
+
+        <div class="small">
+            Roadmap
+        </div>
+
+        <h2>
+            What's Coming?
+        </h2>
+
+        <p>
+            PrimeMC is only getting started.
+        </p>
+
+    </div>
+
+    <div class="roadmap">
+
+        <div class="road-item">
+
+            <h3>
+                Server Launch
+                <span class="status">LIVE</span>
+            </h3>
+
+            <p>
+                Welcome to PrimeMC. The journey begins.
+            </p>
+
+        </div>
+
+        <div class="road-item">
+
+            <h3>
+                Community Events
+                <span class="status">PLANNED</span>
+            </h3>
+
+            <p>
+                Community challenges, competitions and
+                special events.
+            </p>
+
+        </div>
+
+        <div class="road-item">
+
+            <h3>
+                New Content
+                <span class="status">COMING</span>
+            </h3>
+
+            <p>
+                More gameplay features and experiences
+                will continue to be added.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- COMMUNITY -->
+
+<section>
+
+    <div class="community">
+
+        <div class="small">
+            COMMUNITY
+        </div>
+
+        <h3>
+            Ready To Join PrimeMC?
+        </h3>
+
+        <p>
+            Join our Discord, meet the community and
+            stay updated with everything happening on
+            PrimeMC.
+        </p>
+
+        <a
+            class="btn"
+            href="https://discord.gg/eR7yvQqnjr"
+            target="_blank"
+        >
+            Join The Discord
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- FAQ -->
+
+<section id="faq">
+
+    <div class="section-title">
+
+        <div class="small">
+            FAQ
+        </div>
+
+        <h2>
+            Got Questions?
+        </h2>
+
+    </div>
+
+    <div class="faq">
+
+        <details>
+            <summary>What is the PrimeMC IP?</summary>
+
+            <p>
+                The server address is
+                <strong>primemc.playwithbao.com</strong>.
+            </p>
+        </details>
+
+        <details>
+            <summary>How do I join the community?</summary>
+
+            <p>
+                Join our Discord using any of the Discord
+                buttons on this website.
+            </p>
+        </details>
+
+        <details>
+            <summary>Where can I get server updates?</summary>
+
+            <p>
+                All important announcements and updates
+                will be shared through the PrimeMC Discord.
+            </p>
+        </details>
+
+        <details>
+            <summary>Is PrimeMC still growing?</summary>
+
+            <p>
+                Absolutely. PrimeMC is being built with
+                the community and more content is planned.
+            </p>
+        </details>
+
+    </div>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+    <strong>PRIMEMC</strong>
+
+    <p>
+        Your Minecraft adventure starts here.
+    </p>
+
+    <p>
+        © 2026 PrimeMC. All rights reserved.
+    </p>
+
+</footer>
+
+
+<script>
+
+function copyIP(){
+
+    navigator.clipboard.writeText(
+        "primemc.playwithbao.com"
+    );
+
+    const ip = document.querySelector(".ip");
+
+    const oldText = ip.innerHTML;
+
+    ip.innerHTML = "✅ IP COPIED!";
+
+    setTimeout(() => {
+        ip.innerHTML = oldText;
+    },2000);
+}
+
+</script>
+
+</body>
+</html>
+```
