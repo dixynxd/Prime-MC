@@ -12,7 +12,9 @@ padding:0;
 box-sizing:border-box;
 }
 
-html{scroll-behavior:smooth}
+html{
+scroll-behavior:smooth;
+}
 
 body{
 background:#020603;
@@ -75,7 +77,9 @@ object-fit:contain;
 filter:drop-shadow(0 0 12px #19ff6a);
 }
 
-.green{color:#19ff6a}
+.green{
+color:#19ff6a;
+}
 
 .links{
 display:flex;
@@ -125,6 +129,7 @@ border:1px solid rgba(25,255,106,.18);
 box-shadow:0 0 80px rgba(25,255,106,.13);
 transition:.18s ease-out;
 transform-style:preserve-3d;
+overflow:hidden;
 }
 
 .logo img{
@@ -149,7 +154,9 @@ letter-spacing:-7px;
 margin-top:15px;
 }
 
-h1 span{color:#19ff6a}
+h1 span{
+color:#19ff6a;
+}
 
 .hero p{
 max-width:650px;
@@ -258,7 +265,10 @@ transform:translateY(-7px);
 border-color:rgba(25,255,106,.35);
 }
 
-.card h3{margin-top:18px}
+.card h3{
+margin-top:18px;
+}
+
 .card p{
 margin-top:10px;
 color:#91a397;
@@ -276,7 +286,11 @@ margin:auto;
 padding:80px 25px;
 border-radius:35px;
 border:1px solid rgba(25,255,106,.16);
-background:radial-gradient(circle,rgba(25,255,106,.1),transparent 65%);
+background:radial-gradient(
+circle,
+rgba(25,255,106,.1),
+transparent 65%
+);
 }
 
 footer{
@@ -290,11 +304,17 @@ z-index:1;
 
 @media(max-width:750px){
 
-.links{display:none}
+.links{
+display:none;
+}
 
-h1{letter-spacing:-4px}
+h1{
+letter-spacing:-4px;
+}
 
-.cards{grid-template-columns:1fr}
+.cards{
+grid-template-columns:1fr;
+}
 
 .logo{
 width:145px;
@@ -306,7 +326,10 @@ width:115px;
 height:115px;
 }
 
-section{padding:90px 5%}
+section{
+padding:90px 5%;
+}
+
 }
 </style>
 </head>
@@ -317,33 +340,44 @@ section{padding:90px 5%}
 <div class="nav">
 
 <div class="brand">
-<img src="primemc.png">
+<img src="primemc.png" alt="PrimeMC Logo">
 PRIME<span class="green">MC</span>
 </div>
 
 <div class="links">
+
 <a href="#about">About</a>
 <a href="#experience">Experience</a>
 <a href="#community">Community</a>
-<a class="discord" href="https://discord.gg/eR7yvQqnjr" target="_blank">
+
+<a
+class="discord"
+href="https://discord.gg/eR7yvQqnjr"
+target="_blank">
 Discord
 </a>
+
 </div>
 
 </div>
 </nav>
+
 
 <section class="hero">
 
 <div class="hero-content" id="hero">
 
 <div class="logo" id="logo">
-<img src="logo.png">
+<img src="primemc.png" alt="PrimeMC Logo">
 </div>
 
-<div class="tag">WELCOME TO PRIME MC</div>
+<div class="tag">
+WELCOME TO PRIME MC
+</div>
 
-<h1>PRIME<span>MC</span></h1>
+<h1>
+PRIME<span>MC</span>
+</h1>
 
 <p>
 A fresh Minecraft multiplayer experience built for players
@@ -356,7 +390,8 @@ who love adventure, survival, competition and community.
 PLAY NOW
 </button>
 
-<a class="btn secondary"
+<a
+class="btn secondary"
 href="https://discord.gg/eR7yvQqnjr"
 target="_blank">
 JOIN DISCORD
@@ -373,11 +408,14 @@ JOIN DISCORD
 
 </section>
 
+
 <section id="about">
 
 <div class="container">
 
-<div class="label">ABOUT PRIME MC</div>
+<div class="label">
+ABOUT PRIME MC
+</div>
 
 <h2 class="title">
 Your world.<br>
@@ -395,32 +433,69 @@ create your own story.
 
 </section>
 
+
 <section id="experience">
 
 <div class="container">
 
-<div class="label">THE EXPERIENCE</div>
+<div class="label">
+THE EXPERIENCE
+</div>
 
-<h2 class="title">Built for players.</h2>
+<h2 class="title">
+Built for players.
+</h2>
 
 <div class="cards">
 
 <div class="card">
-<div style="font-size:32px">🌎</div>
-<h3>Explore</h3>
-<p>Discover the world and create your own adventure.</p>
+
+<div style="font-size:32px">
+🌎
 </div>
 
-<div class="card">
-<div style="font-size:32px">⚔️</div>
-<h3>Compete</h3>
-<p>Challenge other players and prove yourself.</p>
+<h3>
+Explore
+</h3>
+
+<p>
+Discover the world and create your own adventure.
+</p>
+
 </div>
 
+
 <div class="card">
-<div style="font-size:32px">🏡</div>
-<h3>Build</h3>
-<p>Create your base and leave your mark on PrimeMC.</p>
+
+<div style="font-size:32px">
+⚔️
+</div>
+
+<h3>
+Compete
+</h3>
+
+<p>
+Challenge other players and prove yourself.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<div style="font-size:32px">
+🏡
+</div>
+
+<h3>
+Build
+</h3>
+
+<p>
+Create your base and leave your mark on PrimeMC.
+</p>
+
 </div>
 
 </div>
@@ -429,51 +504,76 @@ create your own story.
 
 </section>
 
+
 <section id="community" class="cta">
 
 <div class="cta-box">
 
-<div class="label">PRIME COMMUNITY</div>
+<div class="label">
+PRIME COMMUNITY
+</div>
 
-<h2 class="title">Ready to join?</h2>
+<h2 class="title">
+Ready to join?
+</h2>
 
-<p class="text" style="margin-left:auto;margin-right:auto">
+<p
+class="text"
+style="margin-left:auto;margin-right:auto">
+
 Join the official PrimeMC Discord for announcements,
 updates and everything happening around the server.
+
 </p>
 
 <br>
 
-<a class="btn primary"
+<a
+class="btn primary"
 href="https://discord.gg/eR7yvQqnjr"
 target="_blank">
+
 JOIN THE DISCORD
+
 </a>
 
 </div>
 
 </section>
 
+
 <footer>
 © 2026 PrimeMC. All rights reserved.
 </footer>
+
 
 <script>
 
 const IP="Primemc.playwithbao.com";
 
 function copyIP(){
+
 navigator.clipboard.writeText(IP);
+
 alert("PrimeMC IP copied!");
+
 }
+
 
 document.addEventListener("mousemove",(e)=>{
 
 const x=e.clientX;
 const y=e.clientY;
 
-document.documentElement.style.setProperty("--mx",x+"px");
-document.documentElement.style.setProperty("--my",y+"px");
+document.documentElement.style.setProperty(
+"--mx",
+x+"px"
+);
+
+document.documentElement.style.setProperty(
+"--my",
+y+"px"
+);
 
 const centerX=window.innerWidth/2;
 const centerY=window.innerHeight/2;
